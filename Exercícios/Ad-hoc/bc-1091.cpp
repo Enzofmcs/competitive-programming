@@ -1,5 +1,5 @@
 // ACCEPTED - ENZO
-// Divisão da Nlogônia
+// Divisão da Nlogônia - 1
 
 #include <bits/stdc++.h>
 
