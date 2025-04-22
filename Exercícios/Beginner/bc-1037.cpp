@@ -1,3 +1,6 @@
+//ACCEPTED - MURILO
+//Intervalo (Beginner 1037)
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -22,36 +25,37 @@ const int mod = 1'000'000'007;
 const int N = 3e5, M = N;
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-int main() {
-    fastio;
-    ll n, result;
-    int i;
-
-    while (true) {
-        cin >> n;
-
-        if (n == 0)
-            return 0;
-
-        vector<ll> v;
-        result = 0;
-
-        for (i = 0; i < n; i++) {
-            ll num;
-            cin >> num;
-            v.push_back(num);
-        }
-    
-        for (i = 0; i < n; i++) {
-            int prev = (i - 1 + n) % n;
-            int next = (i + 1) % n;
-            if ((v[i] > v[prev] && v[i] > v[next]) || (v[i] < v[prev] && v[i] < v[next])) {
-                result++;
-            }
-        }
-    
-        cout << result << "\n";
+int mpow(int base, int exp) {
+    base %= mod;
+    int result = 1;
+    while (exp > 0) {
+      if (exp & 1) result = ((ll)result * base) % mod;
+      base = ((ll)base * base) % mod;
+      exp >>= 1;
     }
+    return result;
+  }
+
+
+int main(){
+    fastio;
+    float n;
+
+    cin>>n;
+
+    if(n>=0 && n<=25){
+        cout<<"Intervalo [0,25]\n";
+    }else if(n>25 && n<=50){
+        cout<<"Intervalo (25,50]\n";
+    }else if(n>50 && n<=75){
+        cout<<"Intervalo (50,75]\n";
+    }else if(n>75 && n<=100){
+        cout<<"Intervalo (75,100]\n";
+    }else{
+        cout<<"Fora de intervalo\n";
+    }
+
+
 
     return 0;
 }
