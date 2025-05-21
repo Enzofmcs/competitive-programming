@@ -1,3 +1,5 @@
+// ENZO -  NÃO RESOLVIDO -dificuldade 3
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -18,16 +20,24 @@ typedef vector<pii>		vpii;
 typedef vector<pl>		vpl;
 typedef vector<vi>		vvi;
 typedef vector<vl>		vvl; 
-const int mod = 1'000'000'007;
-const int N = 3e5, M = N;
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 
 
 
 int main(){
-    fastio;
-    pi("This is the Template!");
+
+    ll i, E1, E2, AT, D;
+
+    while(true){
+        cin >> E1 >> E2 >> AT >> D;
+        if(E1 == 0 && E2 == 0 && AT == 0 && D == 0){
+            break;
+        }
 
 
-    return 0;
+
+
+    }
+
+
 }

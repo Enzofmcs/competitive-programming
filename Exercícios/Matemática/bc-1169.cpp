@@ -22,12 +22,27 @@ const int mod = 1'000'000'007;
 const int N = 3e5, M = N;
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-
+int mpow(int base, int exp) {
+    base %= mod;
+    int result = 1;
+    while (exp > 0) {
+      if (exp & 1) result = ((ll)result * base) % mod;
+      base = ((ll)base * base) % mod;
+      exp >>= 1;
+    }
+    return result;
+  }
 
 int main(){
     fastio;
-    pi("This is the Template!");
+    unsigned ll i, n;
+    si(n);
 
+    n = mpow(n-1, 2);
+    // 1g -> 12 grãos
+    // 1kg -> 12000
 
-    return 0;
 }
+
+
+

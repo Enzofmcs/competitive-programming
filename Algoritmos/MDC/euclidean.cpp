@@ -24,10 +24,19 @@ mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count())
 
 
 
+ll mdc(ll a, ll b){
+    while(b){
+        a = a%b;
+        swap(a,b);
+    }
+    return a;
+}
+
+
 int main(){
     fastio;
-    pi("This is the Template!");
 
+    pl(mdc(54, 81));
 
     return 0;
 }

@@ -1,3 +1,5 @@
+// ENZO - dificuldade 6
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -18,16 +20,38 @@ typedef vector<pii>		vpii;
 typedef vector<pl>		vpl;
 typedef vector<vi>		vvi;
 typedef vector<vl>		vvl; 
-const int mod = 1'000'000'007;
-const int N = 3e5, M = N;
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 
+bool isitprime(unsigned ll n){
+    if(n <= 1){
+        return false;
+    }
 
+    for(unsigned ll i = 2; i*i <= n; i++){
+        if(n % i == 0){
+            return false;
+        }
+    }
+    return true;
+}
 
 int main(){
     fastio;
-    pi("This is the Template!");
+    unsigned ll i, N, x;
+
+    si(N);
+
+    fo(i, N){
+        si(x);
+        if(isitprime(x)){
+            pl("Prime");
+        }
+        else{
+            pl("Not Prime");
+        }
 
 
+
+    }
     return 0;
 }
