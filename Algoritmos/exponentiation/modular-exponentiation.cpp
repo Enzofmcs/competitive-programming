@@ -23,11 +23,19 @@ const int N = 3e5, M = N;
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 
 
+ll mod_exp(ll num, ll exp, ll mod1){
+    ll mult = 1;
+    for(int i = 0; i < exp; i++){
+        mult = (mult*num)%mod1;
+    }
+    return mult;
+}
+
 
 int main(){
     fastio;
-    pi("This is the Template!");
 
+    pl(mod_exp(123213, 9123, 23));
 
     return 0;
 }

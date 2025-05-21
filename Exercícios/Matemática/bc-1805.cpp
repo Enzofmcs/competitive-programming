@@ -1,3 +1,5 @@
+// ENZO - dificuldade 6
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -18,16 +20,19 @@ typedef vector<pii>		vpii;
 typedef vector<pl>		vpl;
 typedef vector<vi>		vvi;
 typedef vector<vl>		vvl; 
-const int mod = 1'000'000'007;
-const int N = 3e5, M = N;
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-
+unsigned ll somaPA(unsigned x, unsigned ll y){
+    return (x+y)*(y-x +1)/2;
+}
 
 int main(){
     fastio;
-    pi("This is the Template!");
+    unsigned ll x, y;
+    cin >> x >> y;
 
+    pl(somaPA(x, y));
 
     return 0;
+
 }

@@ -1,3 +1,5 @@
+
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -22,12 +24,24 @@ const int mod = 1'000'000'007;
 const int N = 3e5, M = N;
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-
+int gcd(int a, int b, int& x, int& y) {
+    x = 1, y = 0;
+    int x1 = 0, y1 = 1, a1 = a, b1 = b;
+    while (b1) {
+        int q = a1 / b1;
+        tie(x, x1) = make_tuple(x1, x - q * x1);
+        tie(y, y1) = make_tuple(y1, y - q * y1);
+        tie(a1, b1) = make_tuple(b1, a1 - q * b1);
+    }
+    return a1;
+}
 
 int main(){
     fastio;
-    pi("This is the Template!");
 
+    pl(gcd(132,144));
 
     return 0;
+
+
 }

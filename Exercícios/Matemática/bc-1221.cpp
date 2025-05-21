@@ -36,7 +36,7 @@ bool isitprime(unsigned ll n){
 }
 
 int main(){
-
+    fastio;
     unsigned ll i, N, x;
 
     si(N);
@@ -53,7 +53,5 @@ int main(){
 
 
     }
-
-
     return 0;
 }

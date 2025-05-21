@@ -51,6 +51,7 @@ bool isitsuper(ll n){
 }
 
 int main(){
+    fastio;
     ll N;
     
     while(si(N)){
