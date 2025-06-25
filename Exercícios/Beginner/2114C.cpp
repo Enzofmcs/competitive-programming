@@ -9,7 +9,7 @@ int main () {
     int t;
     cin >> t;
 
-    while(--t) {
+    while(t--) {
 
         int n;
         cin >> n;
@@ -24,7 +24,7 @@ int main () {
                 ++cont;
             } else {
                 ++sequence;
-                if (sequence == 2 && a[i] != a[i+1]) {
+                if (sequence >= 2 && a[i] != a[i+1]) {
                     ++cont;
                     sequence = 0;
                 }
